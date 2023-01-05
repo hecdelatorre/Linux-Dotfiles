@@ -18,5 +18,5 @@ fi
 for i in "${LINKS[@]}"
 do
   mega-get --ignore-quota-warn $i | tee -a $LOG
-  echo "End $(date +"%H:%M:%S - %d/%m/%Y")" | tee -a $LOG
+  echo "$(date +"%T - %D")" | tee -a $LOG
 done
