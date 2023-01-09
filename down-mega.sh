@@ -20,3 +20,5 @@ do
   mega-get --ignore-quota-warn $i | tee -a $LOG
   echo "$(date +"%T - %D")" | tee -a $LOG
 done
+
+find "$DIR" -type f -exec chmod +rw {} \;
