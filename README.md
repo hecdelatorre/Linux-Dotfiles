@@ -35,3 +35,15 @@ curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/install-bspwm.sh |
 ```bash
 curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/apps_debian.sh | bash
 ```
+
+## nvim configuration
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/nvim-conf.sh | bash
+```
+
+## zsh configuration
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/zsh-conf.sh | bash
+```
