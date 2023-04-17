@@ -98,5 +98,38 @@ packages=(
 )
 
 # Install packages
-apt update
-apt install -y "${packages[@]}"
+sudo apt update
+sudo apt install -y "${packages[@]}"
+
+# Check if ~/.config directory exists
+if [ ! -d ~/.config ]; then
+  echo "Creating ~/.config directory..."
+  mkdir ~/.config
+  echo "Done!"
+else
+  echo "~/.config directory already exists."
+fi
+
+# Check if ~/.config/openbox directory exists
+if [ -d ~/.config/openbox ]; then
+  echo "Deleting ~/.config/openbox directory..."
+  rm -r ~/.config/openbox
+  echo "Done!"
+else
+  echo "~/.config/openbox directory doesn't exist."
+fi
+
+# Check if ~/.config/tint2 directory exists
+if [ -d ~/.config/tint2 ]; then
+  echo "Deleting ~/.config/tint2 directory..."
+  rm -r ~/.config/tint2
+  echo "Done!"
+else
+  echo "~/.config/tint2 directory doesn't exist."
+fi
+
+echo "Copying configuration..."
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/back/openbox-tint2.txz | tar Jxvf - -C ~/.config
+
+cp -vf /etc/X11/xinit/xinitrc ~/.xinitrc
+echo "Done"
