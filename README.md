@@ -36,6 +36,12 @@ curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/install-bspwm.sh |
 curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/apps_debian.sh | bash
 ```
 
+## kitty configuration
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/kitty-conf.sh | bash
+```
+
 ## nvim configuration
 
 ```bash
