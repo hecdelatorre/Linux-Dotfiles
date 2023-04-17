@@ -1,5 +1,37 @@
 # My Scripts
 
-**Useful bash scripts for different cases**
+## Add user sudo (root)
 
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/add_user_sudo.sh | bash
+```
 
+## Debian 11 Sources list (root)
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/sources-debian11.sh | bash
+```
+
+### autoexex (root)
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/autoexec.sh | bash
+```
+
+## Openbox installation
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/install-openbox.sh | bash
+```
+
+## Bspwm installation
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/install-bspwm.sh | bash
+```
+
+### Debian apps
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/apps_debian.sh | bash
+```
