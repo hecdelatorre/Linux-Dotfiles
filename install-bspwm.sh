@@ -98,5 +98,38 @@ packages=(
 )
 
 # Install packages
-apt update
-apt install -y "${packages[@]}"
+sudo apt update
+sudo apt install -y "${packages[@]}"
+
+# Check if ~/.config directory exists
+if [ ! -d ~/.config ]; then
+  echo "Creating ~/.config directory..."
+  mkdir ~/.config
+  echo "Done!"
+else
+  echo "~/.config directory already exists."
+fi
+
+# Check if ~/.config/bspwm directory exists
+if [ -d ~/.config/bspwm ]; then
+  echo "Deleting ~/.config/bspwm directory..."
+  rm -r ~/.config/bspwm
+  echo "Done!"
+else
+  echo "~/.config/bspwm directory doesn't exist."
+fi
+
+# Check if ~/.config/polybar directory exists
+if [ -d ~/.config/polybar ]; then
+  echo "Deleting ~/.config/polybar directory..."
+  rm -r ~/.config/polybar
+  echo "Done!"
+else
+  echo "~/.config/polybar directory doesn't exist."
+fi
+
+echo "Copying configuration..."
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/back/bspwm-polybar.txz | tar Jxvf - -C ~/.config
+
+cp -vf /etc/X11/xinit/xinitrc ~/.xinitrc
+echo "Done"
