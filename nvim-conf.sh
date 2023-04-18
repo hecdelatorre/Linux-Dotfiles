@@ -19,23 +19,16 @@ set softtabstop=2
 filetype plugin indent on
 EOF
 
-# Check if ~/.config directory exists
 if [ ! -d ~/.config ]; then
-  echo "Creating ~/.config directory..."
   mkdir ~/.config
-  echo "Done!"
-else
-  echo "~/.config directory already exists."
 fi
 
-# Check if ~/.config/nvim directory exists
-if [ -d ~/.config/openbox ]; then
-  echo "Deleting ~/.config/nvim directory..."
-  rm -r ~/.config/nvim
-  echo "Done!"
-else
-  echo "~/.config/nvim directory doesn't exist."
+if [ -d ~/.config/nvim ]; then
+  rm -rf ~/.config/nvim
 fi
 
 echo "Copying configuration..."
-curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/back/nvim.txz | tar Jxvf - -C ~/.config/
+
+nvim_txt="/Td6WFoAAATm1rRGAgAhARwAAAAQz1jM4Cf/CABdADcdiVZ0gTBneBz/aYtO5n/1PCWQde6ds9lz1RrXtcnvVLcNv9JdvtrhZuXqSkQl27sVZG62we59l7th8Yzgg7An3BjGVIruicVB/JVVjsHksaLTGxbbAjK7ldNnGMCZa+er8kBfPs6+ZUxw5gPtKXwL10Zr62g6SQjIsaWBZN+tI2TW/zri6ThKohIL5aVnzrV8Fkh4hXvrexK+12kzpSMxDCfQZXwX4de9E0zk6/tlIegqV2uGTNjVV7indQI4Iq2pFcJLwLa1KEXTaX8L8YgohzLm6O/jWf/vlnVuUJjtm/etNkC+rl7udyV4ELmQNr5LznxrM7jBpjm6IYDMTbRkg3qzx8bhkvf1vrlJXde1bkmEV5H1JnfTTWpB62ipjOYTGrl1aA07cAwC2MYDbrhOB4uz8ZUQQBxouJLTpnd6LkYh5xQ1U0gdXvyvVZVL8koLZZrHqAIZO4r6mcQFtyE0u7xidt4rpz+eWmlJzE3W7daJ8pn6uzlxC+2JEFkda8rzPZvL28kIrOeSNggnIzQTrdhFBGk05YyuT5f5ovbChLYjPH7CJijdPOwqfME6ayGU2OKQXefTjdZJEq7uxoTE7QF9QVZP+egE2zLCZeTXvVeBcGtMiNaQiuYHb0rC9nWyobwKgU101sX6PKlYK+96IsAlS1PLJuC/zStQ0MRaEnBY3RmWc13rqrAMTQJ0pV9bZTqDKfFxg+YuweRczz5+nzzPXeVc1dUMxVHbGPW9WYQyQo8EtrHwxMwE3YFXhWpRTezsRZSXNIJX7euX8iw2U6ZDZfDQ8qNjL9eyKQRSJb9OxJH7lKBBmqefZbZRcJC4W193lFC3m8qM6Vo24fjM0Tf5rjfXMsATfZ+bO+mB4D1qXItajPfVvBlDBSBueUl7G6Q0XeL7Xm58c4gjCbYnp2WYYWOAQktZxggN2B+7fz4VoG8jSxuNkMLziVvVMEH9BBZ25FdTHXaP4m3UbPqC0rKGEg5HNZOT0kq8CxpQ2DZCMwSp+SQByFn7B99lNtth/Mvn/6E1JZCoKQUAS0FBy49ce/JKvdZEymQ6S3YPlGTf1t1pO0XS1WLFD52uLYdpY+eVuTFU+ImsB1kn3N1xsicureSLYJRqagAyfG+/oZyNLZShBSWAvpAPvxEQFfZRER/fGT6Bfg7rnESCIpF9/NowK0Y1D2wPOT8AKfUp+T++OOtFF6pN2aNtE+r4ILMJXCDYlt89HVK0FnzXpId405GXrHefWRAP41Xe6oHV3rb1qDAkitvknTfNGWSmnQRFEU5ZzAGpL9+0uv+1OaaVl9oy6vzyXJs3D2yPLK/ING2LfBdtXAA2SR8gL40lPn153kOWSD8Heh8jsk2i5XsJ8BSyyzYKru26WJa/IQLcf2ddy4/AKz9VFUq1FPJQ9hdQTKG5Fn7sSU8gI2jaa1SlAh/6H9Mfn72rlB1ZsilppxAkpYgpXr8sJgJo1khyWupBfXM6nfcp5QYmMgmMkYJvx5gUsooJQzhW2NxXDcBKkU69UUtbeUVPsp/lw/Cs6dF5OsG7AjeVxxHYvMFlRVtxRvBhy2MNR7b871Ml/jUz16GmAGOrQ2a/F44iOnVJbhyTaqja45T8MMjdVVTaLGh0wnbvr42S/ALvYF2JFGTSTU/a1/Q2pZKUlEGdB4ntXNnYlAPYmzswAqyHBFi67xEfSQa+XE5FxpJh7ZEG8S8ZbX0tbIrByuZs2Bky+6mBhnzgOSqFlaCUJ9+J7AuN31n8luMrVPkbNTKh11773CXCoIkqQhQuZooHYll3Gya8Um7U4u2e1cmMY2ypWSATYrzdT7FBDP24NLsMTMMyxu2rBmbQ5V67P9/aGM4ja46GaaKMU9mDCVyMLvg/6xnl8hPhwyQOovHINIjsEbdX89BiNDp5UNOM46/bldm6dg35lXs8VcIQOHTSI/qPt5YBWU8fuIs/fAQeeTCseT+a5yDNX0+XKdlJl/Vy3a8E6QYozI6UB/R66jyKQFILnZBplEhaKPMhGrrRrEKEB9wB1DPe3R2wZQRMSBOMfB8ckjluOwUwjEC1aTnFLJtBbZoRWwva1QO7sLa7xcOljahsMPqPvrslvlTkMO6TZFPAd69HgYcbhFnXlgEkH/K4ao340fqWMPy90jWxqYEnW9Cc3o/CoGDU5Xy3NKnYLF0WPOvYu9Zxrpd0LN4H4tZeQs3DU7+mtv/5HtB6Ooo4ZeEA8HDWfPCob8jUIctK4TjK0vbq48P4mOvWgXBSl0/dglN4Wf2QjaLE1r8zO38ouZca5bpt/nzKv4083dHsu65i1IiB/B321aC+Li8Zn2+4v6Oqr2GjPmv8UATbPrvR/XJzjVEY6TQsXSP3mOKaJg6rZw+K3jmN3lROTw9yoiNQUhSHLS2z+JLGffhZWhnoQmpnU2xHzwQRA82tabfJxPc34lcl0ogrFrkjmLlGCBaZ+NAO9RKBo193ZZJgbaE/pwnrGCsXmUQxtDnXJR8AtbCYvMmqDrmLcWAeOJzuXgei1L9Y/fYXMCqM/jk2gvdEfqGDKylkT8qU4OFpH3omUteK3UOAkSitXXuULZUguT9jRLIw01eoPgiazzA0xLjhS1wwQONnh+MQ5MCnodcPUuPXPmxTrq+E7rF+wJxhuP/O53BWRdfIocK1D5qx8Au4oGO3/kWfsnVAlQEAUGb+NDObMAs7rc2128liLJDgT0Zv0mflZpM3wJJxHFZRpjB2dLDaANDNAHlUl+gXJ8c8AAGcEIBQAADsDfRIscRn+wIAAAAABFla"
+
+base64 -d <<< $nvim_txt | tar Jxvf - -C ~/.config/

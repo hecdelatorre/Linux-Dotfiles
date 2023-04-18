@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 DIR="~/Downloads/myDown"
 if ! [[ -d $DIR ]]; then
