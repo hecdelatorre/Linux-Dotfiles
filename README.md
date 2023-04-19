@@ -170,22 +170,22 @@ curl -fsSL http://tiny.cc/p2d6vz | bash
 curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-wget2.sh | bash
 ```
 
-## Install wget2
+## Install bottom
 
 ```bash
-curl -fsSL http://tiny.cc/p2d6vz | bash
+curl -fsSL http://tiny.cc/94d6vz | bash
 ```
 
 ```bash
-curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-wget2.sh | bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-bottom.sh | bash
 ```
 
-## Install wget2
+## Install pfetch
 
 ```bash
-curl -fsSL http://tiny.cc/p2d6vz | bash
+curl -fsSL http://tiny.cc/b4d6vz | bash
 ```
 
 ```bash
-curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-wget2.sh | bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-pfetch.sh | bash
 ```
