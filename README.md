@@ -170,4 +170,22 @@ curl -fsSL http://tiny.cc/p2d6vz | bash
 curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-wget2.sh | bash
 ```
 
-# 
+## Install wget2
+
+```bash
+curl -fsSL http://tiny.cc/p2d6vz | bash
+```
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-wget2.sh | bash
+```
+
+## Install wget2
+
+```bash
+curl -fsSL http://tiny.cc/p2d6vz | bash
+```
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/install-wget2.sh | bash
+```
