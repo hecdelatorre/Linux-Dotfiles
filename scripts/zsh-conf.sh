@@ -1,4 +1,9 @@
 #/bin/bash
+
+sudo chsh -s $(which zsh) $USER
+
+curl -fsSL https://github.com/hecdelatorre/common/raw/master/common.zsh-theme > ~/.zsh_prompt
+
 cat > ~/.zshrc << EOF
 autoload -U colors && colors
 
@@ -34,7 +39,3 @@ alias xc='xclip -selection clipboard'
 
 #export PATH="$ PATH:/opt/bin"
 EOF
-
-curl -fsSL https://github.com/hecdelatorre/common/raw/master/common.zsh-theme > ~/.zsh_prompt
-
-chsh -s $(which zsh)
