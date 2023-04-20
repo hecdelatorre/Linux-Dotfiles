@@ -1,7 +1,4 @@
 #/bin/bash
-
-chsh -s $(which zsh)
-
 echo "Please select your preferred prompt:"
 echo "1. Simple"
 echo "2. Common"
@@ -58,3 +55,5 @@ alias xc='xclip -selection clipboard'
 
 #export PATH="$ PATH:/opt/bin"
 EOF
+
+chsh -s $(which zsh)
