@@ -1,12 +1,6 @@
 #/bin/bash
-# Get the current user's name
-username=$(whoami)
-if [ -x "$(command -v zsh)" ]; then
-  chsh -s $(which zsh) $username
-  echo "Default shell changed to zsh for user $username"
-else
-  echo "zsh is not installed. Please install zsh before running this script."
-fi
+
+chsh -s $(which zsh)
 
 curl -fsSL https://github.com/hecdelatorre/common/raw/master/common.zsh-theme > ~/.zsh_prompt
 
