@@ -2,7 +2,26 @@
 
 chsh -s $(which zsh)
 
-curl -fsSL https://github.com/hecdelatorre/common/raw/master/common.zsh-theme > ~/.zsh_prompt
+echo "Please select your preferred prompt:"
+echo "1. Simple"
+echo "2. Common"
+
+read -p "Enter your choice (1 or 2): " choice
+
+case $choice in
+    1)
+        echo "Setting up simple prompt..."
+        echo ' PROMPT="%F{cyan}%1/%f %F{green}❯%f "' > ~/.zsh_prompt
+        ;;
+    2)
+        echo "Downloading and setting up common prompt..."
+        curl -fsSL https://github.com/hecdelatorre/common/raw/master/common.zsh-theme > ~/.zsh_prompt
+        ;;
+    *)
+        echo "Invalid choice. Please enter either 1 or 2."
+        exit 1
+        ;;
+esac
 
 cat > ~/.zshrc << EOF
 autoload -U colors && colors
