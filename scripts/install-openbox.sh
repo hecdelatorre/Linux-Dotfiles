@@ -61,6 +61,7 @@ packages=(
 
   # Image viewer
   feh
+  mirage
 
   # Screen capture
   scrot
