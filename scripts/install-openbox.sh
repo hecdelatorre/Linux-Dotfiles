@@ -142,7 +142,7 @@ cat > ~/.local/share/applications/xterm.desktop << EOF
 Name=Xterm
 Comment=Terminal Emulator
 Exec=/usr/bin/xterm
-Icon=/usr/share/icons/gnome/256x256/apps/utilities-terminal.png
+Icon=~/.local/share/icons/xterm.png
 Terminal=false
 Type=Application
 Categories=Utility;TerminalEmulator;
