@@ -100,6 +100,17 @@ curl -fsSL http://tiny.cc/nzb6vz | bash
 curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/zsh-conf.sh | bash
 ```
 
+## zsh simple configuration
+
+```bash
+curl -fsSL http://tiny.cc/qaf6vz | bash
+```
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/zsh-simple-conf.sh | bash
+```
+
+
 ## Install nvim
 
 ```bash
