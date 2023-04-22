@@ -109,7 +109,15 @@ curl -fsSL http://tiny.cc/qaf6vz | bash
 ```bash
 curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/zsh-simple-conf.sh | bash
 ```
+## xterm configuration
 
+```bash
+curl -fsSL http://tiny.cc/6ag6vz | bash
+```
+
+```bash
+curl -fsSL https://gitlab.com/hecdelatorre/scripts/-/raw/main/scripts/xterm-conf.sh | bash
+```
 
 ## Install nvim
 
