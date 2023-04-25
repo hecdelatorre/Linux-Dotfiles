@@ -352,7 +352,7 @@
       <action name="Execute">
         <command>kitty</command>
       </action>
-   </keybind>
+    </keybind>
     <keybind key="W-A-Q">
       <action name="Exit"/>
     </keybind>
@@ -361,6 +361,21 @@
     </keybind>
     <keybind key="A-M-M">
       <action name="Maximize"/>
+    </keybind>
+    <keybind key="Scroll_Lock">
+      <action name="Execute">
+        <command>xset led 3</command>
+      </action>
+    </keybind>
+    <keybind key="A-Scroll_Lock">
+      <action name="Execute">
+        <command>xset led off</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-X">
+      <action name="Execute">
+        <command>slock</command>
+      </action>
     </keybind>
   </keyboard>
   <mouse>
