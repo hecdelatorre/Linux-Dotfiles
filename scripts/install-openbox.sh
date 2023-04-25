@@ -31,7 +31,7 @@ packages=(
   # Window manager
   openbox
   tint2
-  sddm
+  lxdm
   menu
 
   # Desktop environment

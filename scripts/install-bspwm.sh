@@ -32,7 +32,7 @@ packages=(
   bspwm 
   sxhkd 
   polybar
-  sddm
+  lxdm
 
   # Desktop environment
   lxappearance
