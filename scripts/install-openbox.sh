@@ -41,6 +41,7 @@ packages=(
   pulseaudio
   smplayer
   volumeicon-alsa
+  pavucontrol
 
   # File managers
   pcmanfm
