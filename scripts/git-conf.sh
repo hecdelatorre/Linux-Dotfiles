@@ -7,6 +7,9 @@ cat > ~/.gitconfig << EOF
 [alias]
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) :: %C(white)%s%C(reset) %C(dim white) -> %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	s = status -s -b
+  a = add
+  p = push
+  c = commit
 [credential]
 	helper = cache --timeout=3600
 [core]
