@@ -1,6 +1,6 @@
 #/bin/bash
 
-sudo chsh -s $(which zsh) $USER
+chsh -s $(which zsh) $USER
 
 curl -fsSL https://github.com/hecdelatorre/common/raw/master/common.zsh-theme > ~/.zsh_prompt
 

@@ -1,6 +1,6 @@
 #/bin/bash
 
-sudo chsh -s $(which zsh) $USER
+chsh -s $(which zsh) $USER
 
 echo "PROMPT=' %F{cyan}%1/%f %F{green}❯%f '" > ~/.zsh_prompt
 
